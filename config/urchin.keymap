@@ -7,6 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define HOLD_TAP_TAPPING_TERM 280
+#define HOLD_TAP_QUICK_TAP 175
 #define PRIOR_IDLE_MS 150
 
 // Layer definitions
@@ -19,6 +21,11 @@
 // -----------------
 
 / {
+    behaviors {
+        // Left-hand HRMs
+        // Right-hand HRMs
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -31,42 +38,42 @@
 
         lctrl {
             bindings = <&kp LEFT_CONTROL>;
-            key-positions = <0 1>;
+            key-positions = <10 11>;
             timeout-ms = <50>;
             require-prior-idle-ms = <PRIOR_IDLE_MS>;
         };
 
         lalt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <1 2>;
+            key-positions = <11 12>;
             timeout-ms = <50>;
             require-prior-idle-ms = <PRIOR_IDLE_MS>;
         };
 
         lcmd {
             bindings = <&kp LEFT_COMMAND>;
-            key-positions = <2 3>;
+            key-positions = <12 13>;
             timeout-ms = <50>;
             require-prior-idle-ms = <PRIOR_IDLE_MS>;
         };
 
         rctrl {
             bindings = <&kp LEFT_CONTROL>;
-            key-positions = <9 8>;
+            key-positions = <18 19>;
             timeout-ms = <50>;
             require-prior-idle-ms = <PRIOR_IDLE_MS>;
         };
 
         ralt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <8 7>;
+            key-positions = <17 18>;
             timeout-ms = <50>;
             require-prior-idle-ms = <PRIOR_IDLE_MS>;
         };
 
         rcmd {
             bindings = <&kp LEFT_COMMAND>;
-            key-positions = <6 7>;
+            key-positions = <16 17>;
             timeout-ms = <50>;
             require-prior-idle-ms = <PRIOR_IDLE_MS>;
         };
