@@ -76,7 +76,7 @@
             bindings = <
 &kp C_BRIGHTNESS_DEC  &kp C_BRI_UP       &kp C_PREV       &kp C_PLAY_PAUSE  &kp C_NEXT  &trans  &trans  &trans  &trans  &bt BT_CLR
 &kp C_MUTE            &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans            &trans      &trans  &trans  &trans  &trans  &trans
-&bootloader           &trans             &trans           &trans            &trans      &trans  &trans  &trans  &trans  &bootloader
+&bootloader           &trans             &trans           &trans            &trans      &tog 5  &trans  &trans  &trans  &bootloader
                                                           &trans            &trans      &trans  &trans
             >;
         };
@@ -90,6 +90,15 @@
             >;
 
             label = "ext";
+        };
+
+        layer_5 {
+            bindings = <
+&kp N1  &kp N2  &kp N3  &kp N4     &kp N5     &trans  &trans  &trans  &trans  &trans
+&kp Q   &kp W   &kp E   &kp R      &kp T      &trans  &trans  &trans  &trans  &trans
+&kp A   &kp S   &kp D   &kp F      &kp G      &trans  &trans  &trans  &trans  &trans
+                        &kp LCTRL  &kp SPACE  &trans  &trans
+            >;
         };
     };
 };
